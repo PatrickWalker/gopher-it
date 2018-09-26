@@ -373,7 +373,7 @@ field has a name and a type.
 type rectangle struct {
 	width  int //lower case name means private variable
 	height int
-	Name string //this would be exported
+	//Name string //this would be exported
 }
 
 r1 := rectangle{1, 2}       // New rectangle with w + h
