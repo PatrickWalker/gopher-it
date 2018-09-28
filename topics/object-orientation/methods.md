@@ -79,6 +79,8 @@ argument, just as happens in the function version.
 * Exercise template: [source][ts] / [playground][tp]
 * Example solution: [source][ss] / [playground][sp]
 
+[sqt]: https://play.golang.org/p/mmkHNFTEBzG
+[sqs]: https://play.golang.org/p/J2FMikqP8qy
 [ts]: exercises/methods/template/methods.go
 [tp]: http://play.golang.org/p/jnBw-jtE3n
 [ss]: exercises/methods/solution/methods.go

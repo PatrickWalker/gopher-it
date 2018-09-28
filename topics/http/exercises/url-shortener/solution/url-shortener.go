@@ -66,11 +66,12 @@ func shortenURL(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println(err.Error())
 	}
-	//check if it exists if so fetch the existing value and return
 
 	//create the response object
 	var shortResp ShortenResponse
 	shortResp = ShortenResponse{OriginalURL: shortReq.URL}
+
+	//check if it exists if so fetch the existing value and return
 	exists, err := shortenedExist(shortReq.URL)
 	if exists {
 		short, err := getShortenedURL(shortReq.URL)
@@ -88,6 +89,7 @@ func shortenURL(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Unable to shortern url"))
 		return
 	}
+
 	//if not generate the new shortened URL
 	short, err := getShortToken()
 	if err != nil {
@@ -95,7 +97,7 @@ func shortenURL(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Unable to shortern url"))
 		return
 	}
-	//store in the map
+
 	err = storeShortened(short, shortReq.URL)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
