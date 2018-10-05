@@ -159,7 +159,10 @@ go  doWork(done)
 ```
 
 QUESTION FACE - https://play.golang.org/p/5sf4ThHj5aq 
+
+
 Thoughts on why or how? Go tracks what goroutines have access to the channel and whilst they are still present we'll wait and listen. Once they finish we know all the active links to the channel are gone so our listening is finished and so is main. Think back to "all goroutines are asleep" error we encountered early on. Go tracks the references to the channel 
+[This explains it better than I can](https://codeburst.io/diving-deep-into-the-golang-channels-549fd4ed21a8)
 
   
 
