@@ -25,6 +25,7 @@ following sections:
     * [Interfaces](topics/object-orientation/interfaces.md)
     * [Embedding](topics/object-orientation/embedding.md)
     * [Composition](topics/object-orientation/composition.md)
+* [Concurrency] (topics/concurrency)
 * [Testing](topics/testing/)
 * [User Input](topics/handling-input/) 
 * [HTTP](topics/http/)
