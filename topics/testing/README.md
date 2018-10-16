@@ -140,7 +140,7 @@ I did something else poorly. Write some table driven tests to show just how stin
 * Example solution: [source][s2s] / [playground][s2p]
 
 ## Are you mocking me?
-No. I mean I'm really not because mocking isn't something that's part of the test lib in Go. 
+No. I mean I'm really not because mocking isn't something that's part of the standard test lib in Go. 
 
 ### What is mocking?
 
@@ -150,7 +150,7 @@ No. I mean I'm really not because mocking isn't something that's part of the tes
 
 The fringe benefit here being if you use dependency injection your actual production code should (in theory) be easier to change in future. Also the way Go applies interfaces implicitly means we can even wrap external objects and dependencies in interfaces that make sense to us [Worked Example](https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742)
 
-Again if this causes you headaches testify has you covered.
+Again if this causes you headaches testify has you covered. Or there is a fairly mainline blessed mocking project at [go-mock](https://github.com/golang/mock)
 
 ## Examples
  Little easter egg here but go test can help ensure your documentation examples are correct. Check out this [this calhoun article](https://www.calhoun.io/how-to-test-with-go/)  
