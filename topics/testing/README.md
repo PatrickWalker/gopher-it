@@ -1,13 +1,30 @@
 
   
+  
 
 # Testing
 
-  
+## What and Why
+
+If you're not familiar with Unit Testing and why it's useful  then we'll try and do a very quick like 50,000ft view of it now.
+
+Unit Testing makes up the base of the idealised test pyramid that's been referenced by Martin Fowler (not from Eastenders) and others
+![enter image description here](http://www.agilenutshell.com/assets/episodes/way-of-web/testing-pyramid.png)
+
+As it's the base Unit testing is supposed to be bountiful in your project versus a UI driven test or end to end test as it's sometimes known. That's because unit tests are smaller in scope and closer to the code (they are the code really).
+
+The [art of testing](http://artofunittesting.com/definition-of-a-unit-test/) defines a Unit Test as 
+**A unit test is an automated piece of code that invokes a unit of work in the system _and then checks a single assumption about the behavior of that unit of work_**.
+
+So Unit tests are cheaper to write and cheaper to run so you can get very quick feedback on the health of your codebase when making changes. 
+
+Unit testing isn't a panacea and shouldn't be treated as one. Our test pyramid isn't a test block right because you need other complimentary testing types to build up a full and holistic test strategy
+
+They also are fundamental to the cause of Test Driven Development which is typified by an approach of writing a test first and then writing enough code to make that test pass. 
+
+Testing is a big thing in Go. You may be used to needing external libraries to perform your unit testing (things like JUnit and NUnit) but in Go it's part of the [standard lib](https://golang.org/pkg/testing/). 
 
 ## Hello World
-
-  
 
 Let's say we have  file called sum.go
 ```go
@@ -21,7 +38,7 @@ func main() {
     Sum(5, 5)
 }
 ```
-then in another file sum_test.go (and can be another package)
+and that's cool but we would like to test it so then in another file sum_test.go (and can be another package) we do this
 ```go
 package main
 //std lib yo
@@ -36,9 +53,7 @@ func TestSum(t *testing.T) {
 }
 ```
 
-Testing is a big thing in Go. You may be used to needing external libraries to perform your unit testing (things like JUnit and NUnit) but in Go it's part of the [standard lib](https://golang.org/pkg/testing/). 
-
-  ### Naming
+### Naming
 
 So there's a bit to unpack here so let's get started.
 
@@ -64,15 +79,12 @@ Personal recommendation would be try and deal without them for as long as you ca
 
  
 > Stop with the the Fizzbuzz mate. NEVER
-
-> I did fizzbuzz wrong. Write some tests to show the error of my ways
-
-> Then fix the code and run again
+ I did fizzbuzz wrong. Write some tests to show the error of my ways
+Then fix the code and run again
 
   
 * FizzBuzz wrong  [source][fbs] / [playground][fbp]
 * Exercise template: [source][t1s] / [playground][t1p]
-
 * Example solution: [source][s1s] / [playground][s1p]
 
   
@@ -112,8 +124,20 @@ func TestFizzTable(t *testing.T) {
 }	
 ```
 [playground](https://play.golang.org/p/h1fqjmrxahs)
-t.Run is us calling a sub test. That's why we have the name too this allows us to get quicker feedback when something fails
+t.Run is us calling a sub test. That's why we have the name too this allows us to get quicker feedback when something fails.
 
+As I mentioned data driven testing is a technique more than a golang feature. We're covering it here because it's so prevalent in the golang community but you could easily apply this to another language. The advantage is less technical and more about reuse/readability 
+
+# Exercise 2
+
+ 
+> Turning the Tables
+I did something else poorly. Write some table driven tests to show just how stinky the email parse function really is
+
+  
+* Email Parse  [source][eps] / [playground][epp]
+* Exercise template: [source][t2s] / [playground][t2p]
+* Example solution: [source][s2s] / [playground][s2p]
 
 ## Are you mocking me?
 No. I mean I'm really not because mocking isn't something that's part of the test lib in Go. 
@@ -162,6 +186,13 @@ Go test execution has the support for detecting race conditions. That said a lot
 ```
 Issues here can be annoying to fix but the detector makes it a lot easier than getting a phone call at 2 in the morning that production is acting funny :) 
 [More reading](https://blog.golang.org/race-detector)
+
+### Questions
+
+ - True or False test files should be called _test.go
+ - True or False. Tests have to be in the same package as the code they are testing
+ - What's the advantage of test tables?
+ - What is the suggested alternative to using a Mocking framework?
 
 ## Benchmarks
 
@@ -237,3 +268,14 @@ Performance testing at that level is a science this is more a trend indicator
 
 [s1p]: https://play.golang.org/p/g9t8625QBVm
 
+[eps]: exercises/table-tests/emailparse.go
+
+[epp]: https://play.golang.org/p/DkAT36h75li
+
+[t2s]:exercises/table-tests/emailparsetmpl_test.go
+
+[t2p]:https://play.golang.org/p/RpT18X-3OH3
+
+[s2s]:exercises/table-tests/emailparse_test.go
+
+[s2p]: https://play.golang.org/p/5MO2Cxq3lcr
