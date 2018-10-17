@@ -87,7 +87,7 @@ Then fix the code and run again
 * Exercise template: [source][t1s] / [playground][t1p]
 * Example solution: [source][s1s] / [playground][s1p]
 
-  
+* Overall Solution (with running tests)  [playground](https://play.golang.org/p/glsJXwbo6_5)
 
 ## Test Tables
 
