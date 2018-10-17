@@ -256,7 +256,7 @@ Performance testing at that level is a science this is more a trend indicator
 
 [Dave Cheney](https://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go) has written blog posts on this and done some amazing videos.
 
-https://github.com/PatrickWalker/gopher-it/blob/master/topics/testing/fixbuzz/fizzbuzz.go
+
 [fbs]: fixbuzz/fizzbuzz.go
 
 [fbp]: https://play.golang.org/p/GtIAcIEs2TP
