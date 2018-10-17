@@ -256,26 +256,27 @@ Performance testing at that level is a science this is more a trend indicator
 
 [Dave Cheney](https://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go) has written blog posts on this and done some amazing videos.
 
-[fbs]: exercises/fixbuzz/fizzbuzz.go
+https://github.com/PatrickWalker/gopher-it/blob/master/topics/testing/fixbuzz/fizzbuzz.go
+[fbs]: fixbuzz/fizzbuzz.go
 
 [fbp]: https://play.golang.org/p/GtIAcIEs2TP
 
-[t1s]: exercises/fixbuzz/fizzbuzztmp_test.go
+[t1s]: fixbuzz/fizzbuzztmp_test.go
 
-[t1p]:https://play.golang.org/p/I7NkuidFWBQ
+[t1p]: https://play.golang.org/p/I7NkuidFWBQ
 
-[s1s]: exercises/fixbuzz/fizzbuzz_test.go
+[s1s]: fixbuzz/fizzbuzz_test.go
 
 [s1p]: https://play.golang.org/p/g9t8625QBVm
 
-[eps]: exercises/table-tests/emailparse.go
+[eps]: table-tests/emailparse.go
 
 [epp]: https://play.golang.org/p/DkAT36h75li
 
-[t2s]:exercises/table-tests/emailparsetmpl_test.go
+[t2s]: table-tests/emailparsetmpl_test.go
 
-[t2p]:https://play.golang.org/p/RpT18X-3OH3
+[t2p]: https://play.golang.org/p/RpT18X-3OH3
 
-[s2s]:exercises/table-tests/emailparse_test.go
+[s2s]: table-tests/emailparse_test.go
 
 [s2p]: https://play.golang.org/p/5MO2Cxq3lcr
