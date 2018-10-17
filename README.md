@@ -72,6 +72,10 @@ presented as a hands-on workshop.  In this format, the workshop should take
 around 8 hours, with each section talked through by the presenter, before
 the participants work through the relevant exercise (preferably in pairs).  
 
+## Follow Up
+
+If you are still longing for more go then I can recommend some good [free resources](https://medium.com/@bpatrick.walker/i-would-like-to-go-now-free-resources-for-learning-go-2018-9834f3d064e1)
+
 ## Source and Contributing
 
 The source for this material is [available on
