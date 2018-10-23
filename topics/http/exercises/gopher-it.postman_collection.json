@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "93b79fb7-7553-437a-9a5c-1942d50ef9f0",
+		"name": "gopher-it",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Exercise 1 Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9090/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "patrick"
+				},
+				"url": {
+					"raw": "http://localhost:9090/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise 2 Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9091/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise 2 Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"patrick\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9091/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise 3 Shorten",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\":\t\"https://medium.design/facilitation-tips-for-better-meetings-85b17834d74\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9092/shorten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise 3 Get (replace the GUID String with your one)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9092/RLfdKSfC5UgUfUYXloDHqw==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"RLfdKSfC5UgUfUYXloDHqw=="
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise 3 List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9092/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
